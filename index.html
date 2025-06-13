@@ -14,21 +14,33 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      font-size: 16px;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
-    }
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 60px auto; /* adds top margin */
+    padding: 0 1.2em 2em; /* adds left/right and bottom padding */
+  }
 
-    .dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
+  .dark-mode {
+    background-color: #111;
+    color: #eee;
+  }
+
+  .toggle-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 1000;
+    border-radius: 5px;
+  }
 
     h1, h2 {
       font-weight: bold;
