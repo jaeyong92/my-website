@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jae-Yong Lee</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #111111;
+      --bg-dark: #111111;
+      --text-dark: #ffffff;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      font-size: 16px;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    h1, h2 {
+      font-weight: bold;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #toggle-dark {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: 1px solid #888;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+
+    .dark-mode #toggle-dark {
+      background-color: #222;
+      color: white;
+      border-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle-dark">Toggle Dark Mode</button>
+
+  <h1>Welcome to my personal website!</h1>
+  <p>I’m Jae-Yong, but you can call me Jae.</p>
+  <ul>
+    <li>New York City via Seoul, Zurich, Beijing, London, Boston, and San Francisco.</li>
+    <li>Fluent in English, French, German, Korean, and Mandarin Chinese. Basic Russian.</li>
+    <li>Clarinetist, certified personal trainer, and former amateur boxer.</li>
+    <li>MIT Sloan MBA Class of 2021. Alum of the University of St. Gallen, with study abroad at Tsinghua University.</li>
+    <li>Let’s connect if you’re interested in cars, geopolitics, national security, fitness, gaming, or operations management!</li>
+  </ul>
+
+  <h2>Bio</h2>
+
+  <p>I’m currently the VP Operations at <a href="https://www.thordynamics.com/" target="_blank">Thor Dynamics</a>, a defense technology company specializing in directed energy systems for counter-drone applications. I lead our operations strategy and manage daily operations, vital for delivering advanced national security, military, and law enforcement solutions.</p>
+
+  <p>Previously, I began my tenure at <a href="https://www.rivian.com/" target="_blank">Rivian</a> in Palo Alto with the strategy and corporate development team, focusing on strategic finance and contributing to the IPO. I then transitioned to the B2B team, where my focus shifted to sales & operations planning (S&OP), sales operations, manufacturing coordination, and RFPs for government sales within the automotive industry.</p>
+
+  <p>My career began as a diplomatic attaché at the Embassy of Switzerland in Beijing, gaining direct experience in international relations and geopolitical analysis. I then transitioned into venture capital in London, focusing on early-stage investments (Seed, Series A, Series B) across technologies central to the global race for technological supremacy, such as robotics, sensor technologies, machine perception, SLAM, and autonomous vehicle technologies. I also co-founded a startup commercializing privacy-focused data science solutions.</p>
+
+  <p>Beyond these professional experiences, my personal and professional ethics are deeply rooted in my upbringing in a family of classical musicians, further shaped by my experiences in the military and my work in security at a refugee center during the Arab Spring of 2011. This background has cultivated capabilities in risk assessment, crisis management, cross-cultural communication, and an acute understanding of human factors within high-stakes operational contexts, proving invaluable for strategic information gathering.</p>
+
+  <p>Academically, I majored in business and information systems in college, though courses in political science – particularly comparative political economy – ultimately had the greatest impact on my career. At MIT, I focused on manufacturing, logistics, and supply chain management. My passion for aerospace and defense also led me to co-preside over the MIT Sloan Space Industry Club and serve as a fundraiser for the MIT Rocket Team.</p>
+
+  <p><a href="https://www.linkedin.com/in/jae-yonglee/" target="_blank">LinkedIn</a></p>
+
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
