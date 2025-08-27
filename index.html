@@ -100,12 +100,13 @@
       color: #eeeeee;
     }
     
-    .stabilo a {
+    /* Corrected rule for all highlighted links */
+    a.stabilo, .stabilo a {
         text-decoration: underline;
-        color: #005a9c; /* Explicit link color for light mode */
+        color: #005a9c;
     }
-    .dark-mode .stabilo a {
-        color: #8ab4f8; /* Explicit link color for dark mode */
+    .dark-mode a.stabilo, .dark-mode .stabilo a {
+        color: #8ab4f8;
     }
 
   </style>
