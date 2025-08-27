@@ -22,6 +22,7 @@
     margin: auto;
     padding: 5em 1.2em 2em;
     text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
   }
 
   /* Added CSS for extra space above H2 */
@@ -53,6 +54,10 @@
     text-decoration: none;
   }
 
+  .dark-mode a {
+    color: #38a6ff;
+  }
+
   a:hover {
     text-decoration: underline;
   }
@@ -68,6 +73,7 @@
       font-size: 14px;
       cursor: pointer;
       background-color: #eee;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .dark-mode #toggle-dark {
@@ -76,22 +82,33 @@
       border-color: #555;
     }
 
-.stabilo {
-  background-color: #d1e8e2; /* Light teal background */
-  color: #111111;            /* Dark text for contrast */
-  padding: 3px 6px;
-  border-radius: 4px;
-}
+    /* -- Highlight Style (Modern Teal) -- */
+    .stabilo {
+      background-color: #d1e8e2; /* Light teal background */
+      color: #111111;            /* Dark text for contrast */
+      padding: 3px 6px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
 
-.dark-mode .stabilo {
-  background-color: #2a4b43; /* Dark slate-teal background */
-  color: #eeeeee;            /* Light text for contrast */
-}
+    .dark-mode .stabilo {
+      background-color: #2a4b43; /* Dark slate-teal background */
+      color: #eeeeee;            /* Light text for contrast */
+    }
+    
+    /* -- Style for highlighted links -- */
+    a.stabilo {
+        text-decoration: underline;
+        color: #005a9c; /* Darker blue for light mode */
+    }
+    .dark-mode a.stabilo {
+        color: #8ab4f8; /* Lighter blue for dark mode */
+    }
+
   </style>
-
 </head>
-<body>
-  <button id="toggle-dark">Toggle Dark Mode</button>
+<body class="dark-mode">
+  <button id="toggle-dark">Toggle Light Mode</button>
 
   <h1>Welcome to my personal website!</h1>
   <p>I’m Jae-Yong, but you can call me Jae.</p>
@@ -107,21 +124,35 @@
 
 <h2>Bio</h2>
 
-<p><b>As VP Operations</b> at <a href="https://www.thordynamics.com/" target="_blank"><span class="stabilo">Thor Dynamics</span></a>, a US defense company specializing in counter-drone directed energy systems, I lead operations strategy and build the company's operational engine. This work, spanning from manufacturing and supply chain to finance and compliance, delivers our critical technology to the warfighter while meeting the rigorous demands of our government partners.
+<p><b>As VP Operations</b> at <a href="https://www.thordynamics.com/" target="_blank" class="stabilo">Thor Dynamics</a>, a US defense company specializing in counter-drone directed energy systems, I lead operations strategy and build the company's operational engine. This work, spanning from manufacturing and supply chain to finance and compliance, delivers our critical technology to the warfighter while meeting the rigorous demands of our government partners.
 
-<p><b>My professional approach</b> is built on the discipline I learned from a family of classical musicians and was forged during my service in the <span class="stabilo">Swiss Armed Forces</span>. This experience gave me an intimate understanding of military life, including its culture, its operational realities and the logic that shapes them, and the principles of civil-military integration. It trained me to think about building resilient systems - a perspective that applies not only to my work as an operations leader but to the broader challenges of ensuring American national resilience.
+<p><b>My professional approach</b> is built on the discipline I learned from a family of classical musicians and was forged during my service in the <span class="stabilo">Swiss Armed Forces</span>. This experience gave me an intimate understanding of military life, including its culture, its operational realities and the logic that shapes them, and the principles of civil-military integration. It trained me to think about building <span class="stabilo">resilient systems</span> - a perspective that applies not only to my work as an operations leader but to the broader challenges of ensuring American national resilience.
 
-<p><b>As a third-culture kid</b> who has grown up, lived, and worked across Asia, Europe, and the US, I navigate complex international environments and operate effectively across cultures. My past experiences in high-stakes international settings, from <span class="stabilo">security work at a refugee center during the 2011 Arab Spring</span> to serving as <span class="stabilo">a diplomatic attaché in Beijing</span>, have sharpened this perspective. <span class="stabilo">My fluency in five languages</span> provides a nuanced understanding of global geopolitics, while my time in Beijing offered a firsthand view of statecraft, i.e., how governments operate, how intelligence informs policy, how foreign policy is executed, and the strategic interests that drive great power competition.
+<p><b>As a third-culture kid</b> who has grown up, lived, and worked across Asia, Europe, and the US, I navigate complex international environments and operate effectively across cultures. My past experiences in high-stakes international settings, from security work at a refugee center during the 2011 Arab Spring to serving as a <span class="stabilo">diplomatic attaché in Beijing</span>, have sharpened this perspective. My <span class="stabilo">fluency in five languages</span> provides a nuanced understanding of global geopolitics, while my time in Beijing offered a firsthand view of statecraft, i.e., how governments operate, how intelligence informs policy, how foreign policy is executed, and the strategic interests that drive great power competition.
 
-<p><b>My career</b> has centered on the operational challenges of scaling advanced technology. At <a href="https://www.rivian.com/" target="_blank"><span class="stabilo">Rivian</span></a>, I started on the strategy and corporate development team, focusing on strategic finance and the company's IPO. I then moved to the B2B team, where I handled sales and operations planning (S&OP), manufacturing coordination, and government sales proposals. Before that, as a <span class="stabilo">venture capital investor</span> in London, I specialized in early-stage companies developing robotics, advanced sensors, machine perception, SLAM, and autonomous vehicle technologies. I also <span class="stabilo">co-founded a data science startup</span>, serving as CFO through its seed funding round and winning the LSE Entrepreneur of the Year award.
+<p><b>My career</b> has centered on the operational challenges of scaling advanced technology. At <a href="https://www.rivian.com/" target="_blank">Rivian</a>, I started on the strategy and corporate development team, focusing on strategic finance and the company's IPO. I then moved to the B2B team, where I handled sales and operations planning (S&OP), manufacturing coordination, and government sales proposals. Before that, as a <span class="stabilo">venture capital investor</span> in London, I specialized in early-stage companies developing robotics, advanced sensors, machine perception, SLAM, and autonomous vehicle technologies. I also co-founded a data science startup, serving as CFO through its seed funding round and winning the LSE Entrepreneur of the Year award.
 
 <p><b>Academically</b>, I majored in business and information systems, but it was my political science courses - particularly in comparative political economy - that most shaped my career path. At MIT, I focused my MBA on <span class="stabilo">supply chain, manufacturing, and logistics management</span>. A passion for aerospace and defense also led me to co-preside over the MIT Sloan Space Industry Club and serve as a fundraiser for the MIT Rocket Team.</p>
 
   <script>
-    const toggle = document.getElementById('toggle-dark');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
+    const toggleButton = document.getElementById('toggle-dark');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      updateButtonText();
     });
+
+    function updateButtonText() {
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = 'Toggle Light Mode';
+      } else {
+        toggleButton.textContent = 'Toggle Dark Mode';
+      }
+    }
+    
+    // Set initial button text on load
+    updateButtonText();
   </script>
 </body>
 </html>
