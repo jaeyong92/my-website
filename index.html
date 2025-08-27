@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Jae-Yong Lee</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-light: #ffffff;
@@ -14,7 +16,7 @@
     }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: white;
     color: black;
     line-height: 1.6;
@@ -86,7 +88,7 @@
     }
 
     .stabilo {
-      background-color: #fff8c4;
+      background-color: #fef47c;
       color: #111111;
       padding: 1px 3px;
       border-radius: 4px;
@@ -94,16 +96,16 @@
     }
 
     .dark-mode .stabilo {
-      background-color: #5a522d;
+      background-color: #6c642c;
       color: #eeeeee;
     }
     
-    a.stabilo {
+    .stabilo a {
         text-decoration: underline;
-        color: #005a9c;
+        color: #005a9c; /* Explicit link color for light mode */
     }
-    .dark-mode a.stabilo {
-        color: #8ab4f8;
+    .dark-mode .stabilo a {
+        color: #8ab4f8; /* Explicit link color for dark mode */
     }
 
   </style>
@@ -111,7 +113,7 @@
 <body>
   <button id="toggle-dark">Toggle Dark Mode</button>
 
-  <h1>Welcome to my personal website!</h1>
+  <h1>Welcome to my personal website.</h1>
   <p>I’m Jae-Yong, but you can call me Jae.</p>
   <ul>
     <li>Based in New York City, via Seoul, Zurich, Beijing, London, Boston, and San Francisco.</li>
@@ -125,13 +127,13 @@
 
 <h2>Bio</h2>
 
-<p><b>As <span class="stabilo">VP Operations at</span></b> <a href="https://www.thordynamics.com/" target="_blank" class="stabilo">Thor Dynamics</a>, a US defense company specializing in counter-drone directed energy systems, I lead operations strategy and build the company's operational engine. This work, spanning from manufacturing and supply chain to finance and compliance, delivers our critical technology to the warfighter while meeting the rigorous demands of our government partners.
+<p><b>As</b> <span class="stabilo"><b>VP Operations</b> at <a href="https://www.thordynamics.com/" target="_blank">Thor Dynamics</a></span>, a US defense company specializing in counter-drone directed energy systems, I lead operations strategy and build the company's operational engine. This work, spanning from manufacturing and supply chain to finance and compliance, delivers our critical technology to the warfighter while meeting the rigorous demands of our government partners.
 
-<p><b>My professional approach</b> is built on the discipline I learned from a family of classical musicians and was forged during my service in the <span class="stabilo">Swiss Armed Forces</span>. This experience gave me an intimate understanding of military life, including its culture, its operational realities and the logic that shapes them, and the principles of civil-military integration. It trained me to think about building <span class="stabilo">resilient systems</span> - a perspective that applies not only to my work as an operations leader but to the broader challenges of ensuring American national resilience.
+<p><b>My professional approach</b> is built on the discipline I learned from a family of classical musicians and was forged during my <span class="stabilo">service in the Swiss Armed Forces</span>. This experience gave me an intimate understanding of military life, including its culture, its operational realities and the logic that shapes them, and the principles of civil-military integration. It trained me to think about building <span class="stabilo">resilient systems</span> - a perspective that applies not only to my work as an operations leader but to the broader challenges of ensuring American national resilience.
 
 <p><b>As a third-culture kid</b> who has grown up, lived, and worked across Asia, Europe, and the US, I navigate complex international environments and operate effectively across cultures. My past experiences in high-stakes international settings, from security work at a refugee center during the 2011 Arab Spring to serving as a <span class="stabilo">diplomatic attaché in Beijing</span>, have sharpened this perspective. My <span class="stabilo">fluency in five languages</span> provides a nuanced understanding of global geopolitics, while my time in Beijing offered a firsthand view of statecraft, i.e., how governments operate, how intelligence informs policy, how foreign policy is executed, and the strategic interests that drive great power competition.
 
-<p><b>My career</b> has centered on the operational challenges of scaling advanced technology. At <a href="https://www.rivian.com/" target="_blank">Rivian</a>, I started on the strategy and corporate development team, focusing on strategic finance and the company's IPO. I then moved to the B2B team, where I handled sales and operations planning (S&OP), manufacturing coordination, and government sales proposals. Before that, as a <span class="stabilo">venture capital investor</span> in London, I specialized in early-stage companies developing robotics, advanced sensors, machine perception, SLAM, and autonomous vehicle technologies. I also co-founded a data science startup, serving as CFO through its seed funding round and winning the LSE Entrepreneur of the Year award.
+<p><b>My career</b> has centered on the operational challenges of scaling advanced technology. At <a href="https://www.rivian.com/" target="_blank" class="stabilo">Rivian</a>, I started on the strategy and corporate development team, focusing on strategic finance and the company's IPO. I then moved to the B2B team, where I handled sales and operations planning (S&OP), manufacturing coordination, and government sales proposals. Before that, as a <span class="stabilo">venture capital investor</span> in London, I specialized in early-stage companies developing robotics, advanced sensors, machine perception, SLAM, and autonomous vehicle technologies. I also co-founded a data science startup, serving as CFO through its seed funding round and winning the LSE Entrepreneur of the Year award.
 
 <p><b>Academically</b>, I majored in business and information systems, but it was my political science courses - particularly in comparative political economy - that most shaped my career path. At <span class="stabilo">MIT</span>, I focused my MBA on <span class="stabilo">supply chain, manufacturing, and logistics management</span>. A passion for aerospace and defense also led me to co-preside over the MIT Sloan Space Industry Club and serve as a fundraiser for the MIT Rocket Team.</p>
 
