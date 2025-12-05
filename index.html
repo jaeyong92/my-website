@@ -83,7 +83,7 @@
     :root {
       --bg-light: #ffffff;
       --text-light: #111111;
-      --bg-dark: #111111;
+      --bg-dark: #000000; /* UPDATE 1: True Black Variable */
       --text-dark: #ffffff;
     }
 
@@ -107,8 +107,9 @@
     font-weight: 700;
   }
 
+  /* UPDATE 2: True Black Background Rule */
   .dark-mode {
-    background-color: #111;
+    background-color: #000000; 
     color: #eee;
   }
 
@@ -154,7 +155,7 @@
     }
 
     .dark-mode #toggle-dark {
-      background-color: #222;
+      background-color: #222; /* Kept gray so the button is visible against black */
       color: white;
       border-color: #555;
     }
@@ -172,7 +173,6 @@
       color: #eeeeee;
     }
     
-    /* Corrected rule for all highlighted links */
     a.stabilo, .stabilo a {
         text-decoration: underline;
         color: #005a9c;
@@ -180,12 +180,9 @@
     .dark-mode a.stabilo, .dark-mode .stabilo a {
         color: #8ab4f8;
     }
-li {
-    margin-bottom: 1em;
-  }
-
-
-
+    li {
+        margin-bottom: 1em;
+    }
   </style>
 </head>
 <body class="dark-mode">
@@ -196,7 +193,7 @@ li {
 
     <h2>Thesis</h2>
     <p>Decisive advantage is not built on a superior product. It is built on superior processes. The organization <i>is</i> the product.</p>
-    <p>I build the operational engine that fuses operations strategy, financial rigor, and high-stakes compliance (ITAR, export controls) to deliver and sustain that advantage.</p>
+    <p>I build the operational engine that unifies operations strategy, financial rigor, and high-stakes compliance (ITAR, export controls) to deliver and sustain that advantage.</p>
     <p>My focus is on hard operational problems in the American defense-industrial base.</p>
 
      <h2>Profile</h2>
