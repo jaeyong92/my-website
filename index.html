@@ -90,7 +90,10 @@
         "Diplomatic Service",
         "AUKUS",
         "NATO Defense Industrial Base",
-        "Defense Private Equity"
+        "Defense Private Equity",
+        "Private Equity Operating Partner",
+        "Multiple Expansion",
+        "Transaction Readiness"
       ]
     }
     </script>
@@ -98,141 +101,173 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-light: #ffffff;
-      --text-light: #111111;
-      --bg-dark: #000000; /* UPDATE 1: True Black Variable */
-      --text-dark: #ffffff;
+      --bg-light: #f7f5f0;
+      --text-light: #1a1a1a;
+      --accent-light: #8b1a1a;
+      --bg-dark: #0a0a0a;
+      --text-dark: #e8e4dc;
+      --accent-dark: #c0392b;
+      --muted-dark: #6b6560;
+      --muted-light: #7a7068;
     }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: white;
-    color: black;
-    line-height: 1.6;
-    max-width: 720px;
-    margin: auto;
-    padding: 5em 1.2em 2em;
-    text-align: left;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.75;
+      max-width: 680px;
+      margin: auto;
+      padding: 5em 1.4em 4em;
+      text-align: left;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-weight: 400;
+      font-size: 1.07em;
+    }
 
-  h2 {
-    margin-top: 2em;
-  }
-  
-  b {
-    font-weight: 700;
-  }
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 2.6em;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.1em;
+      line-height: 1.1;
+    }
 
-  /* UPDATE 2: True Black Background Rule */
-  .dark-mode {
-    background-color: #000000; 
-    color: #eee;
-  }
+    h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.25em;
+      margin-top: 2.5em;
+      margin-bottom: 0.6em;
+      letter-spacing: 0.02em;
+    }
 
-  .toggle-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9em;
-    z-index: 1000;
-    border-radius: 5px;
-  }
+    .subtitle {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.85em;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted-light);
+      margin-bottom: 3em;
+    }
 
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
+    b {
+      font-weight: 600;
+    }
 
-  .dark-mode a {
-    color: #38a6ff;
-  }
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    .dark-mode .subtitle {
+      color: var(--muted-dark);
+    }
+
+    a {
+      color: var(--accent-light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent-light);
+    }
+
+    .dark-mode a {
+      color: #c87070;
+    }
+
+    .dark-mode a:hover {
+      border-bottom-color: #c87070;
+    }
 
     #toggle-dark {
       position: fixed;
-      top: 10px;
-      right: 10px;
+      top: 16px;
+      right: 16px;
       background: none;
-      border: 1px solid #888;
-      padding: 6px 12px;
-      border-radius: 4px;
-      font-size: 14px;
+      border: 1px solid var(--muted-light);
+      padding: 5px 14px;
+      border-radius: 2px;
+      font-size: 11px;
+      font-family: 'Source Serif 4', serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       cursor: pointer;
-      background-color: #eee;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: var(--muted-light);
+      background-color: transparent;
+      transition: all 0.2s ease;
+    }
+
+    #toggle-dark:hover {
+      border-color: var(--text-light);
+      color: var(--text-light);
     }
 
     .dark-mode #toggle-dark {
-      background-color: #222; /* Kept gray so the button is visible against black */
-      color: white;
-      border-color: #555;
+      border-color: var(--muted-dark);
+      color: var(--muted-dark);
     }
 
-    .stabilo {
-      background-color: #fef47c;
-      color: #111111;
-      padding: 1px 3px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+    .dark-mode #toggle-dark:hover {
+      border-color: var(--text-dark);
+      color: var(--text-dark);
     }
 
-    .dark-mode .stabilo {
-      background-color: #6c642c;
-      color: #eeeeee;
+    .divider {
+      border: none;
+      border-top: 1px solid #d4cfc7;
+      margin: 3em 0 0 0;
     }
-    
-    a.stabilo, .stabilo a {
-        text-decoration: underline;
-        color: #005a9c;
+
+    .dark-mode .divider {
+      border-top-color: #2a2a2a;
     }
-    .dark-mode a.stabilo, .dark-mode .stabilo a {
-        color: #8ab4f8;
-    }
-    li {
-        margin-bottom: 1em;
+
+    p {
+      margin-bottom: 1.2em;
     }
   </style>
 
 </head>
 <body class="dark-mode">
-  <button id="toggle-dark">Toggle Light Mode</button>
+  <button id="toggle-dark">Light</button>
 
   <h1>Jae-Yong Lee</h1>
-  <p>Operations. Strategy. National Security.</p>
+  <p class="subtitle">Operations &nbsp;&middot;&nbsp; Strategy &nbsp;&middot;&nbsp; National Security</p>
 
-  <h2>Thesis</h2>
+  <h2>THESIS</h2>
   <p>Decisive advantage is built not on a superior product, but on superior processes. The organization <i>is</i> the product.</p>
-  <p>I build the operational and commercial infrastructure that turns a startup into an institutional, acquirable platform. My focus is on the hard problems that determine whether a company commands a premium at exit or gets discounted in due diligence.</p>
+  <p>I build the operational and commercial infrastructure that turns a company into an institutional, acquirable platform. My focus is on the hard problems that determine whether a company commands a premium at exit or gets discounted in due diligence.</p>
   <p>My work is at the intersection of defense and dual-use technology.</p>
 
-  <h2>Profile</h2>
-  <p><b>Operations</b>: My approach to resilience was forged in the infantry and codified through operations science and strategic finance. I build the institutional architecture that allows a technical team to scale: unit economics that survive investor scrutiny, governance frameworks that hold up in due diligence, and operations that scale without breaking.</p>
+  <h2>PROFILE</h2>
+  <p><b>Transaction Readiness</b>: I eliminate the valuation discount levers that surface in acquisitions. Before any commitment is made, I determine whether it is commercially viable, operationally executable, and legally clean. I build the supply chain screening architecture that catches hidden adversarial ownership exposure before it becomes a due diligence problem, and the compliance infrastructure that removes the remediation costs acquirers use to compress multiples. This work applies equally to pure defense and to dual-use technology companies where the regulatory exposure is less obvious and the due diligence gap is wider.</p>
 
-  <p><b>Transaction Readiness</b>: I eliminate the valuation discount levers that surface in acquisitions. Before any commitment is made, I determine whether it is commercially viable, operationally executable, and legally clean. I build the supply chain screening architecture that catches hidden adversarial ownership exposure before it becomes a due diligence problem, and the compliance infrastructure that removes the remediation costs acquirers use to compress multiples.</p>
+  <p><b>Operations</b>: My approach to resilience was forged in the infantry and codified through operations science and strategic finance. I build the institutional architecture that allows a technical team to scale: unit economics that survive investor scrutiny, governance frameworks that hold up in due diligence, and operations that scale without breaking. For private equity, this means building the repeatable SOPs and management infrastructure that hold value independent of any individual.</p>
 
   <p><b>Geopolitics</b>: My competence is built on living within societies, not just observing them. During the 2011 Arab Spring, I worked frontline security at a refugee center and assessed the human reality behind the headlines. Later, as a Diplomatic Attaché in Beijing, I bypassed the Embassy bubble to cultivate primary sources across social layers. I connect high-level strategy with ground truth.</p>
 
-  <h2>Track Record</h2>
+  <hr class="divider">
+
+  <h2>TRACK RECORD</h2>
   <p><b>Current</b>: VP Operations at <a href="https://www.thordynamics.com/" target="_blank">Thor Dynamics</a>, a directed energy C-UAS defense company.</p>
-  <p><b>Formerly</b>: operations, B2B deal desk, and strategy at <a href="https://www.rivian.com/" target="_blank">Rivian</a>; data science company co-founder; venture capital (robotics). <i>Prior service:</i> diplomatic attaché; infantry.</p>
+  <p><b>Formerly</b>: operations, B2B deal desk, and strategy at <a href="https://www.rivian.com/" target="_blank">Rivian</a> (incl. Amazon commercial fleet transaction); data science company co-founder; venture capital (robotics). <i>Prior service:</i> diplomatic attaché; infantry.</p>
   <p><b>Education</b>: MIT Sloan MBA (Operations Science); MSc, London School of Economics; BBA, Univ. St. Gallen. Study abroad at Tsinghua University in Beijing.</p>
   <p><b>Certification</b>: CUSECO (Certified U.S. Export Compliance Officer).</p>
   <p><b>Languages</b>: Fluent in English, French, German, Korean, and Mandarin.</p>
 
-  <h2>Contact</h2>
-  <p>If you are working on hard operational problems in national security, <a href="mailto:jaeyong.lee@alum.mit.edu">I would like to hear from you</a>.</p>
+  <hr class="divider">
+
+  <h2>CONTACT</h2>
+  <p>If you are building technology that matters, whether in defense, dual-use, or anywhere the operational problems are genuinely hard, <a href="mailto:jaeyong.lee@alum.mit.edu">I would like to hear from you</a>.</p>
   <p><a href="https://www.linkedin.com/in/jae-yonglee/" target="_blank">LinkedIn profile</a></p>
 
   <script>
@@ -244,9 +279,9 @@
     });
     function updateButtonText() {
       if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = 'Toggle Light Mode';
+        toggleButton.textContent = 'Light';
       } else {
-        toggleButton.textContent = 'Toggle Dark Mode';
+        toggleButton.textContent = 'Dark';
       }
     }
     updateButtonText();
