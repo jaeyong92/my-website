@@ -118,14 +118,14 @@
       font-family: 'Source Serif 4', Georgia, serif;
       background-color: var(--bg-light);
       color: var(--text-light);
-      line-height: 1.75;
+      line-height: 1.8;
       max-width: 680px;
       margin: auto;
       padding: 5em 1.4em 4em;
       text-align: left;
       transition: background-color 0.3s ease, color 0.3s ease;
       font-weight: 400;
-      font-size: 1.07em;
+      font-size: 1.15em;
     }
 
     h1 {
@@ -148,12 +148,27 @@
 
     .subtitle {
       font-family: 'Source Serif 4', serif;
-      font-size: 0.85em;
+      font-size: 0.82em;
       font-weight: 400;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted-light);
       margin-bottom: 3em;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1.18em;
+        padding: 3.5em 1.3em 3em;
+        line-height: 1.85;
+      }
+      h1 {
+        font-size: 2.1em;
+      }
+      h2 {
+        font-size: 1.2em;
+        margin-top: 2em;
+      }
     }
 
     b {
