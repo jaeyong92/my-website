@@ -153,7 +153,7 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted-light);
-      margin-bottom: 3em;
+      margin-bottom: 0.8em;
     }
 
     @media (max-width: 600px) {
@@ -204,12 +204,9 @@
     }
 
     #toggle-dark {
-      position: fixed;
-      top: 16px;
-      right: 16px;
       background: none;
       border: 1px solid var(--muted-light);
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 2px;
       font-size: 11px;
       font-family: 'Source Serif 4', serif;
@@ -219,6 +216,8 @@
       color: var(--muted-light);
       background-color: transparent;
       transition: all 0.2s ease;
+      display: inline-block;
+      margin-bottom: 3em;
     }
 
     #toggle-dark:hover {
@@ -253,10 +252,9 @@
 
 </head>
 <body class="dark-mode">
-  <button id="toggle-dark">Light</button>
-
   <h1>Jae-Yong Lee</h1>
   <p class="subtitle">Operations &nbsp;&middot;&nbsp; Strategy &nbsp;&middot;&nbsp; National Security</p>
+  <button id="toggle-dark">Switch to light mode</button>
 
   <h2>THESIS</h2>
   <p>Decisive advantage is built not on a superior product, but on superior processes. The organization <i>is</i> the product.</p>
@@ -296,9 +294,9 @@
     });
     function updateButtonText() {
       if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = 'Light';
+        toggleButton.textContent = 'Switch to light mode';
       } else {
-        toggleButton.textContent = 'Dark';
+        toggleButton.textContent = 'Switch to dark mode';
       }
     }
     updateButtonText();
